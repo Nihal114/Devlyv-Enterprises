@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devlyv Enterprises - Engineering the Future</title>
-    <!-- SEO Meta Tags -->
+
+    <!-- SEO Meta Tags (Preserved) -->
     <meta name="description" content="Devlyv Enterprises delivers elite enterprise solutions, AI, cloud solutions, Flutter app development, web development, product management, digital marketing, and strategy roadmapping with GTM for global market domination.">
     <meta name="keywords" content="Devlyv, Enterprise Solutions, AI, Artificial Intelligence, Cloud Solutions, Flutter App Development, Web Development, Product Management, Digital Marketing, Strategy, Roadmapping, GTM, Consulting, Technology, Bangalore, India">
     <meta name="author" content="Devlyv Enterprises">
     <link rel="canonical" href="https://devlyv-enterprises.vercel.app/">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook (Preserved) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devlyv-enterprises.vercel.app/">
     <meta property="og:title" content="Devlyv Enterprises - Engineering the Future">
     <meta property="og:description" content="Elite enterprise solutions, AI, cloud solutions, Flutter app development, web development, product management, digital marketing, and strategy roadmapping with GTM for global market domination.">
-    <meta property="og:image" content="https://devlyv-enterprises.vercel.app/assets/images/DEVLYV%20LOGO.png">
+    <meta property="og:image" content="https://placehold.co/1200x630/111827/FFFFFF?text=Devlyv">
 
-    <!-- Twitter -->
+    <!-- Twitter (Preserved) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://devlyv-enterprises.vercel.app/">
     <meta name="twitter:title" content="Devlyv Enterprises - Engineering the Future">
     <meta name="twitter:description" content="Elite enterprise solutions, AI, cloud solutions, Flutter app development, web development, product management, digital marketing, and strategy roadmapping with GTM for global market domination.">
-    <meta name="twitter:image" content="https://devlyv-enterprises.vercel.app/assets/images/DEVLYV%20LOGO.png">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/111827/FFFFFF?text=Devlyv">
 
-    <!-- Organization Schema -->
+    <!-- Organization Schema (Preserved) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Devlyv Enterprises",
       "url": "https://devlyv-enterprises.vercel.app/",
-      "logo": "https://devlyv-enterprises.vercel.app/assets/images/DEVLYV%20LOGO.png",
+      "logo": "https://placehold.co/200x50/111827/FFFFFF?text=DEVLYV",
       "contactPoint": [{
         "@type": "ContactPoint",
         "email": "DevlyvEnterprises@outlook.com",
@@ -49,323 +50,374 @@
     }
     </script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Premium Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/images/DEVLYV LOGO.png" type="image/png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://placehold.co/32x32/111827/FFFFFF?text=D" type="image/png">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0d0d0d;
+            color: #E0E0E0;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-12 text-white;
+        }
+        .nav-link {
+            @apply relative text-white font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            @apply w-full;
+        }
+        .fade-in-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .accordion-button:not(.collapsed) {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+         .accordion-button:not(.collapsed)::after {
+            transform: rotate(-180deg);
+        }
+        .accordion-button::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="assets/images/DEVLYV LOGO.png" alt="Devlyv Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products">Our Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#offerings">Core Offerings</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-choose">Why Devlyv</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#get-quote">Get a Quote</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="fade-in">Engineering the Future with Devlyv</h1>
-            <p class="fade-in">We create and empower global enterprise solutions.</p>
-            <a href="#get-quote" class="btn btn-primary fade-in">Get Started</a>
-        </div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="fade-in">About Us</h2>
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>At Devlyv Enterprises, our mission is to solve large-scale enterprise problems and enable market domination through innovative solutions. We are execution-obsessed professionals who combine strategic thinking with cutting-edge technology to deliver transformative results.</p>
-                    <p>Our vision is to become the global leader in enterprise transformation, empowering businesses to not just compete, but to dominate their markets through superior technology and strategic implementation.</p>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <a href="#home" class="text-2xl font-bold text-white">
+                    DEVLYV
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#offerings" class="nav-link">Offerings</a>
+                    <a href="#why-choose" class="nav-link">Why Devlyv</a>
+                    <a href="#contact" class="nav-link bg-white text-black py-2 px-4 rounded-md hover:bg-gray-200 transition-colors">Get a Quote</a>
                 </div>
-                <div class="about-image fade-in">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Strategic Teamwork">
-                </div>
-            </div>
+                <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
         </div>
-    </section>
-    <!-- Products Section -->
-    <section id="products" class="section">
-        <div class="container">
-            <h2 class="fade-in">Our Products</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="product-card fade-in">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Medlive">
-                        <div class="card-body">
-                            <h5>LYFE</h5>
-                            <p>LYFE is a smart wearable storing your medical and identity info, ready for instant access in emergencies. With NFC tech, first responders can view critical data fast. Lightweight, secure, and stylish — LYFE protects your life and expresses your style, empowering safe, confident living anywhere.</p>
-                        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black/90 z-40 md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="text-2xl text-white mobile-nav-link">Home</a>
+            <a href="#about" class="text-2xl text-white mobile-nav-link">About</a>
+            <a href="#products" class="text-2xl text-white mobile-nav-link">Products</a>
+            <a href="#offerings" class="text-2xl text-white mobile-nav-link">Offerings</a>
+            <a href="#why-choose" class="text-2xl text-white mobile-nav-link">Why Devlyv</a>
+            <a href="#contact" class="text-2xl text-white mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="h-screen flex items-center justify-center text-center bg-black relative overflow-hidden">
+             <div class="absolute inset-0 bg-grid-gray-900/40 [mask-image:linear-gradient(to_bottom,white_20%,transparent_100%)]"></div>
+            <div class="z-10 px-4">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 fade-in-element">Engineering the Future</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 fade-in-element" style="transition-delay: 200ms;">We create and empower global enterprise solutions, turning complex challenges into market-dominating realities.</p>
+                <a href="#contact" class="bg-white text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-transform transform hover:scale-105 fade-in-element" style="transition-delay: 400ms;">Partner With Us</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in-element">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">We are execution-obsessed professionals.</h2>
+                        <p class="mb-4 text-gray-300">At Devlyv Enterprises, our mission is to solve large-scale enterprise problems and enable market domination through innovative solutions. We combine strategic thinking with cutting-edge technology to deliver transformative results.</p>
+                        <p class="text-gray-300">Our vision is to become the global leader in enterprise transformation, empowering businesses to not just compete, but to dominate their markets through superior technology and strategic implementation.</p>
                     </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="product-card fade-in">
-                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Eventry">
-                        <div class="card-body">
-                            <h5>Eventry</h5>
-                            <p>Eventry is a smart event platform with digital tickets, NFC access, and instant check-ins for fast, secure entry. Organizers get full control and live data, while guests enjoy a smooth, effortless experience. Eventry makes events efficient and memorable, leaving a strong impact every time.</p>
-                        </div>
+                    <div class="fade-in-element">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Strategy" alt="Strategic Teamwork" class="rounded-lg shadow-2xl w-full">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Core Offerings Section -->
-    <section id="offerings" class="section offerings">
-        <div class="container">
-            <h2 class="fade-in">Our Core Offerings</h2>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="offering-card fade-in">
-                        <div class="icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h5>Enterprise Solution Design & Transformation</h5>
-                        <p>Solve complex operational and product challenges. Modernize, optimize, and dominate your market through strategic transformation.</p>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title fade-in-element">Our In-House Ventures</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 rounded-xl fade-in-element">
+                        <img src="https://placehold.co/600x350/111827/9CA3AF?text=LYFE" alt="LYFE Product" class="rounded-lg mb-6 w-full">
+                        <h3 class="text-2xl font-bold text-white mb-3">LYFE</h3>
+                        <p class="text-gray-300">A smart wearable storing your medical and identity info for instant access in emergencies. With NFC tech, first responders get critical data fast. Lightweight, secure, and stylish — LYFE protects your life and expresses your style.</p>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="offering-card fade-in">
-                        <div class="icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h5>Advanced Product & Platform Engineering</h5>
-                        <p>Build robust web, cloud, AI, and cross-platform solutions at scale with future-ready architecture and performance.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="offering-card fade-in">
-                        <div class="icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h5>New Venture & Innovation Enablement</h5>
-                        <p>Launch internal or partnered ventures with speed and execution precision, turning innovative ideas into market-dominating realities.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="offering-card fade-in">
-                        <div class="icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h5>Strategic Growth & GTM Systems</h5>
-                        <p>Architect market entry, growth loops, and unstoppable brand presence that drives sustainable competitive advantage.</p>
+                    <div class="glass-card p-8 rounded-xl fade-in-element" style="transition-delay: 200ms;">
+                        <img src="https://placehold.co/600x350/111827/9CA3AF?text=Eventry" alt="Eventry Product" class="rounded-lg mb-6 w-full">
+                        <h3 class="text-2xl font-bold text-white mb-3">Eventry</h3>
+                        <p class="text-gray-300">A smart event platform with digital tickets, NFC access, and instant check-ins for fast, secure entry. Organizers get full control and live data, while guests enjoy a smooth, effortless experience. Eventry makes events efficient and memorable.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Why Choose Devlyv Section -->
-    <section id="why-choose" class="section">
-        <div class="container">
-            <h2 class="fade-in">Why Choose Devlyv</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="why-item fade-in">
-                        <h5>Execution-Obsessed</h5>
-                        <p>We don't just plan - we execute with precision and relentless focus on results that matter to your bottom line.</p>
+        </section>
+
+        <!-- Core Offerings Section -->
+        <section id="offerings" class="py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title fade-in-element">Core Offerings</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-white hover:bg-gray-900/50 transition-all duration-300 fade-in-element">
+                        <i class="fas fa-cogs text-4xl text-white mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Enterprise Solution Design</h3>
+                        <p class="text-gray-400">Modernize, optimize, and dominate your market through strategic transformation.</p>
                     </div>
-                    <div class="why-item fade-in">
-                        <h5>Enterprise-Scale Mastery</h5>
-                        <p>Deep expertise in handling complex, large-scale enterprise challenges with proven methodologies and frameworks.</p>
+                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-white hover:bg-gray-900/50 transition-all duration-300 fade-in-element" style="transition-delay: 150ms;">
+                        <i class="fas fa-rocket text-4xl text-white mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Platform Engineering</h3>
+                        <p class="text-gray-400">Build robust web, cloud, AI, and cross-platform solutions at scale.</p>
                     </div>
-                    <div class="why-item fade-in">
-                        <h5>Hybrid Service + Venture Approach</h5>
-                        <p>Unique blend of consulting services and venture building, offering comprehensive solutions from strategy to execution.</p>
+                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-white hover:bg-gray-900/50 transition-all duration-300 fade-in-element" style="transition-delay: 300ms;">
+                        <i class="fas fa-lightbulb text-4xl text-white mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Innovation Enablement</h3>
+                        <p class="text-gray-400">Turn innovative ideas into market-dominating realities with speed and precision.</p>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="why-item fade-in">
-                        <h5>Future-Ready Engineering Backbone</h5>
-                        <p>Cutting-edge technology stack and architectural principles that ensure your solutions scale and adapt to future needs.</p>
-                    </div>
-                    <div class="why-item fade-in">
-                        <h5>Trusted, Global, Agile Mindset</h5>
-                        <p>International perspective with local execution, combining global best practices with agile methodologies.</p>
+                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-white hover:bg-gray-900/50 transition-all duration-300 fade-in-element" style="transition-delay: 450ms;">
+                        <i class="fas fa-chart-line text-4xl text-white mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Strategic Growth & GTM</h3>
+                        <p class="text-gray-400">Architect market entry, growth loops, and unstoppable brand presence.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section testimonials">
-        <div class="container">
-            <h2 class="fade-in">Testimonials</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card fade-in">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John Doe">
-                        <p>"Devlyv transformed our operations and helped us dominate the market! Their execution-obsessed approach delivered results beyond our expectations."</p>
-                        <h6>John Doe</h6>
-                        <small>CEO, TechCorp Global</small>
+        </section>
+
+        <!-- Why Choose Devlyv Section -->
+        <section id="why-choose" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title fade-in-element">The Devlyv Advantage</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="fade-in-element">
+                        <h3 class="text-xl font-bold text-white mb-2">Execution-Obsessed</h3>
+                        <p class="text-gray-400">We don't just plan - we execute with relentless focus on results that matter to your bottom line.</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card fade-in">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b436?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jane Smith">
-                        <p>"Their innovative solutions are unmatched in the industry. Devlyv's strategic approach to enterprise transformation is simply revolutionary."</p>
-                        <h6>Jane Smith</h6>
-                        <small>CTO, Innovation Labs</small>
+                    <div class="fade-in-element">
+                        <h3 class="text-xl font-bold text-white mb-2">Enterprise-Scale Mastery</h3>
+                        <p class="text-gray-400">Deep expertise in handling complex, large-scale challenges with proven frameworks.</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card fade-in">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Emily Johnson">
-                        <p>"A game-changer for our enterprise! Devlyv's hybrid approach and future-ready engineering delivered sustainable competitive advantage."</p>
-                        <h6>Emily Johnson</h6>
-                        <small>COO, Enterprise Solutions Inc.</small>
+                    <div class="fade-in-element">
+                        <h3 class="text-xl font-bold text-white mb-2">Hybrid Service + Venture</h3>
+                        <p class="text-gray-400">A unique blend of consulting and venture building, offering solutions from strategy to execution.</p>
+                    </div>
+                    <div class="fade-in-element">
+                        <h3 class="text-xl font-bold text-white mb-2">Future-Ready Engineering</h3>
+                        <p class="text-gray-400">Cutting-edge tech stack and architecture that ensure your solutions scale and adapt.</p>
+                    </div>
+                    <div class="fade-in-element">
+                        <h3 class="text-xl font-bold text-white mb-2">Trusted, Global Mindset</h3>
+                        <p class="text-gray-400">International perspective with local execution, combining global best practices with agile methods.</p>
+                    </div>
+                     <div class="fade-in-element">
+                        <h3 class="text-xl font-bold text-white mb-2">Strategic Partnership</h3>
+                        <p class="text-gray-400">We function as an extension of your team, deeply invested in your long-term success.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Get Quote Section -->
-    <section id="get-quote" class="section">
-        <div class="container">
-            <h2 class="fade-in">Get a Quote</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <form class="fade-in" action="mailto:DevlyvEnterprises@outlook.com" method="post" target="_blank" enctype="text/plain">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title fade-in-element">What Our Partners Say</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 rounded-xl fade-in-element">
+                        <p class="text-gray-300 mb-6">"Devlyv transformed our operations and helped us dominate the market! Their execution-obsessed approach delivered results beyond our expectations."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/FFFFFF/111827?text=JD" alt="John Doe" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">John Doe</h4>
+                                <p class="text-sm text-gray-400">CEO, TechCorp Global</p>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl fade-in-element" style="transition-delay: 200ms;">
+                        <p class="text-gray-300 mb-6">"Their innovative solutions are unmatched. Devlyv's strategic approach to enterprise transformation is simply revolutionary."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/FFFFFF/111827?text=JS" alt="Jane Smith" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">Jane Smith</h4>
+                                <p class="text-sm text-gray-400">CTO, Innovation Labs</p>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="company" class="form-label">Company</label>
-                            <input type="text" class="form-control" id="company" name="company">
+                    </div>
+                    <div class="glass-card p-8 rounded-xl fade-in-element" style="transition-delay: 400ms;">
+                        <p class="text-gray-300 mb-6">"A game-changer for our enterprise! Devlyv's hybrid approach and future-ready engineering delivered sustainable competitive advantage."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/FFFFFF/111827?text=EJ" alt="Emily Johnson" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">Emily Johnson</h4>
+                                <p class="text-sm text-gray-400">COO, Enterprise Solutions Inc.</p>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Project Details</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Tell us about your project requirements and how we can help transform your enterprise..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Quote Section -->
+        <section id="contact" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="section-title fade-in-element">Let's Build the Future Together</h2>
+                    <p class="text-gray-300 mb-12 max-w-2xl mx-auto fade-in-element">Ready to transform your enterprise? Tell us about your project. We're ready to execute.</p>
+                    <form class="fade-in-element" action="mailto:DevlyvEnterprises@outlook.com" method="post" target="_blank" enctype="text/plain">
+                        <div class="grid sm:grid-cols-2 gap-6 mb-6">
+                            <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-white focus:outline-none">
+                            <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-white focus:outline-none">
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Get a Quote</button>
+                        <div class="mb-6">
+                             <input type="text" name="company" placeholder="Company Name" class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-white focus:outline-none">
                         </div>
+                        <div class="mb-6">
+                            <textarea name="message" rows="6" placeholder="Project Details..." required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-white focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-transform transform hover:scale-105">Submit Project</button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- FAQs Section -->
-    <section id="faqs" class="section">
-        <div class="container">
-            <h2 class="fade-in text-center mb-4">Frequently Asked Questions</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What services do you offer?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We offer comprehensive enterprise solutions including solution design & transformation, advanced product & platform engineering, new venture & innovation enablement, and strategic growth & GTM systems. Our services are designed to solve complex operational challenges and drive market dominance.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How can we partner with Devlyv?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We welcome partnerships that align with our mission of enterprise transformation and market domination. Contact us through our quote form or email us directly at DevlyvEnterprises@outlook.com to discuss partnership opportunities and how we can collaborate to achieve your strategic objectives.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What is your execution approach?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Our approach is execution-obsessed, focusing on delivering results with precision and agility. We combine strategic thinking with cutting-edge technology implementation, ensuring every project delivers measurable impact and sustainable competitive advantage for our clients.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            What makes Devlyv different from other consulting firms?
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Devlyv combines the strategic depth of top-tier consulting with the execution power of a technology company. Our hybrid service + venture approach, future-ready engineering backbone, and global yet agile mindset set us apart. We don't just advise - we build, implement, and deliver transformative results that drive market domination.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
     <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h5>Contact Information</h5>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:DevlyvEnterprises@outlook.com">DevlyvEnterprises@outlook.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
-                    <div class="social-links">
-                        <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
+    <footer class="border-t border-gray-800">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-4">DEVLYV</h4>
+                    <p class="text-gray-400">Engineering the Future.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#offerings" class="text-gray-400 hover:text-white">Offerings</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-4">Contact</h5>
+                    <ul class="space-y-2">
+                        <li><a href="mailto:DevlyvEnterprises@outlook.com" class="text-gray-400 hover:text-white">DevlyvEnterprises@outlook.com</a></li>
+                        <li class="text-gray-400">Bangalore, India</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white mb-4">Connect</h5>
+                    <div class="flex space-x-4 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/company/devlyv-enterprises/" target="_blank" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#products">Our Products</a></li>
-                        <li><a href="#offerings">Core Offerings</a></li>
-                        <li><a href="#why-choose">Why Devlyv</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h5>Services</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#offerings">Enterprise Transformation</a></li>
-                        <li><a href="#offerings">Product Engineering</a></li>
-                        <li><a href="#offerings">Innovation Enablement</a></li>
-                        <li><a href="#offerings">Strategic Growth</a></li>
-                    </ul>
-                </div>
             </div>
-            <div class="text-center mt-4 pt-4" style="border-top: 1px solid var(--border-color);">
+            <div class="text-center text-gray-500 mt-12 pt-8 border-t border-gray-800">
                 <p>&copy; 2025 Devlyv Enterprises. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-black/80', 'backdrop-blur-sm');
+                } else {
+                    navbar.classList.remove('bg-black/80', 'backdrop-blur-sm');
+                }
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden'); // Prevent scrolling when menu is open
+            };
+            
+            mobileMenuButton.addEventListener('click', toggleMenu);
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+            // On-scroll fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in-element');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(el => {
+                observer.observe(el);
+            });
+            
+             // Active nav link highlighting
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const activateNavLink = () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 60) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', activateNavLink);
+            activateNavLink(); // Initial check
+        });
+    </script>
 </body>
 </html>
