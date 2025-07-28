@@ -5,34 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devlyv Enterprises - Engineering the Future</title>
 
-    <!-- SEO Meta Tags (Preserved) -->
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Devlyv Enterprises delivers elite enterprise solutions, AI, cloud solutions, Flutter app development, web development, product management, digital marketing, and strategy roadmapping with GTM for global market domination.">
     <meta name="keywords" content="Devlyv, Enterprise Solutions, AI, Artificial Intelligence, Cloud Solutions, Flutter App Development, Web Development, Product Management, Digital Marketing, Strategy, Roadmapping, GTM, Consulting, Technology, Bangalore, India">
     <meta name="author" content="Devlyv Enterprises">
     <link rel="canonical" href="https://devlyv-enterprises.vercel.app/">
 
-    <!-- Open Graph / Facebook (Preserved) -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devlyv-enterprises.vercel.app/">
     <meta property="og:title" content="Devlyv Enterprises - Engineering the Future">
     <meta property="og:description" content="Elite enterprise solutions, AI, cloud solutions, Flutter app development, web development, product management, digital marketing, and strategy roadmapping with GTM for global market domination.">
-    <meta property="og:image" content="https://placehold.co/1200x630/111827/FFFFFF?text=Devlyv">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop">
 
-    <!-- Twitter (Preserved) -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://devlyv-enterprises.vercel.app/">
     <meta name="twitter:title" content="Devlyv Enterprises - Engineering the Future">
     <meta name="twitter:description" content="Elite enterprise solutions, AI, cloud solutions, Flutter app development, web development, product management, digital marketing, and strategy roadmapping with GTM for global market domination.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/111827/FFFFFF?text=Devlyv">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop">
 
-    <!-- Organization Schema (Preserved) -->
+    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Devlyv Enterprises",
       "url": "https://devlyv-enterprises.vercel.app/",
-      "logo": "https://placehold.co/200x50/111827/FFFFFF?text=DEVLYV",
+      "logo": "https://devlyv-enterprises.vercel.app/assets/images/DEVLYV%20LOGO.png",
       "contactPoint": [{
         "@type": "ContactPoint",
         "email": "DevlyvEnterprises@outlook.com",
@@ -58,20 +58,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="https://placehold.co/32x32/111827/FFFFFF?text=D" type="image/png">
+    <link rel="icon" href="https://placehold.co/32x32/0ea5e9/FFFFFF?text=D" type="image/png">
 
     <!-- Custom Styles -->
     <style>
+        :root {
+            --primary-color: #0ea5e9; /* sky-500 */
+            --dark-bg: #0d0d0d;
+        }
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #0d0d0d;
+            background-color: var(--dark-bg);
             color: #E0E0E0;
         }
         .section-title {
-            @apply text-3xl md:text-4xl font-bold text-center mb-12 text-white;
+            @apply text-3xl md:text-4xl font-bold text-center mb-16 text-white relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
         }
         .nav-link {
-            @apply relative text-white font-medium after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300;
+            @apply relative text-white font-medium after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300;
         }
         .nav-link:hover::after, .nav-link.active::after {
             @apply w-full;
@@ -90,20 +105,11 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
         }
-        .accordion-button:not(.collapsed) {
-            color: #ffffff;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-         .accordion-button:not(.collapsed)::after {
-            transform: rotate(-180deg);
-        }
-        .accordion-button::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            display: inline-block;
-            transition: transform 0.2s ease-in-out;
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -121,7 +127,7 @@
                     <a href="#products" class="nav-link">Products</a>
                     <a href="#offerings" class="nav-link">Offerings</a>
                     <a href="#why-choose" class="nav-link">Why Devlyv</a>
-                    <a href="#contact" class="nav-link bg-white text-black py-2 px-4 rounded-md hover:bg-gray-200 transition-colors">Get a Quote</a>
+                    <a href="#contact" class="bg-sky-500 text-white font-semibold py-2 px-5 rounded-md hover:bg-sky-600 transition-colors">Get a Quote</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
                     <i class="fas fa-bars"></i>
@@ -131,7 +137,7 @@
     </header>
     
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-black/90 z-40 md:hidden">
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black/95 z-40 md:hidden">
         <div class="flex flex-col items-center justify-center h-full space-y-8">
             <a href="#home" class="text-2xl text-white mobile-nav-link">Home</a>
             <a href="#about" class="text-2xl text-white mobile-nav-link">About</a>
@@ -149,7 +155,7 @@
             <div class="z-10 px-4">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 fade-in-element">Engineering the Future</h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 fade-in-element" style="transition-delay: 200ms;">We create and empower global enterprise solutions, turning complex challenges into market-dominating realities.</p>
-                <a href="#contact" class="bg-white text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-transform transform hover:scale-105 fade-in-element" style="transition-delay: 400ms;">Partner With Us</a>
+                <a href="#contact" class="bg-sky-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-sky-600 transition-transform transform hover:scale-105 fade-in-element" style="transition-delay: 400ms;">Partner With Us</a>
             </div>
         </section>
 
@@ -163,7 +169,7 @@
                         <p class="text-gray-300">Our vision is to become the global leader in enterprise transformation, empowering businesses to not just compete, but to dominate their markets through superior technology and strategic implementation.</p>
                     </div>
                     <div class="fade-in-element">
-                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Strategy" alt="Strategic Teamwork" class="rounded-lg shadow-2xl w-full">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" alt="A team collaborating on a strategic plan on a glass board" class="rounded-lg shadow-2xl w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -174,15 +180,19 @@
             <div class="container mx-auto px-4">
                 <h2 class="section-title fade-in-element">Our In-House Ventures</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="glass-card p-8 rounded-xl fade-in-element">
-                        <img src="https://placehold.co/600x350/111827/9CA3AF?text=LYFE" alt="LYFE Product" class="rounded-lg mb-6 w-full">
-                        <h3 class="text-2xl font-bold text-white mb-3">LYFE</h3>
-                        <p class="text-gray-300">A smart wearable storing your medical and identity info for instant access in emergencies. With NFC tech, first responders get critical data fast. Lightweight, secure, and stylish — LYFE protects your life and expresses your style.</p>
+                    <div class="glass-card p-8 rounded-xl fade-in-element flex flex-col">
+                        <img src="https://images.unsplash.com/photo-1617855147992-3bf482b41465?q=80&w=600&auto=format&fit=crop" alt="A sleek smartwatch displaying health and fitness data on its screen" class="rounded-lg mb-6 w-full h-64 object-cover">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-sky-400 mb-3">LYFE</h3>
+                            <p class="text-gray-300">A smart wearable storing your medical and identity info for instant access in emergencies. With NFC tech, first responders get critical data fast. Lightweight, secure, and stylish — LYFE protects your life and expresses your style.</p>
+                        </div>
                     </div>
-                    <div class="glass-card p-8 rounded-xl fade-in-element" style="transition-delay: 200ms;">
-                        <img src="https://placehold.co/600x350/111827/9CA3AF?text=Eventry" alt="Eventry Product" class="rounded-lg mb-6 w-full">
-                        <h3 class="text-2xl font-bold text-white mb-3">Eventry</h3>
-                        <p class="text-gray-300">A smart event platform with digital tickets, NFC access, and instant check-ins for fast, secure entry. Organizers get full control and live data, while guests enjoy a smooth, effortless experience. Eventry makes events efficient and memorable.</p>
+                    <div class="glass-card p-8 rounded-xl fade-in-element flex flex-col" style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=600&auto=format&fit=crop" alt="The vibrant atmosphere of a live event with stage lights and a crowd" class="rounded-lg mb-6 w-full h-64 object-cover">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-sky-400 mb-3">Eventry</h3>
+                            <p class="text-gray-300">A smart event platform with digital tickets, NFC access, and instant check-ins for fast, secure entry. Organizers get full control and live data, while guests enjoy a smooth, effortless experience. Eventry makes events efficient and memorable.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -193,23 +203,23 @@
             <div class="container mx-auto px-4">
                 <h2 class="section-title fade-in-element">Core Offerings</h2>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-white hover:bg-gray-900/50 transition-all duration-300 fade-in-element">
-                        <i class="fas fa-cogs text-4xl text-white mb-4"></i>
+                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-sky-500 hover:bg-gray-900/50 transition-all duration-300 fade-in-element transform hover:-translate-y-2">
+                        <i class="fas fa-cogs text-4xl text-sky-500 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Enterprise Solution Design</h3>
                         <p class="text-gray-400">Modernize, optimize, and dominate your market through strategic transformation.</p>
                     </div>
-                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-white hover:bg-gray-900/50 transition-all duration-300 fade-in-element" style="transition-delay: 150ms;">
-                        <i class="fas fa-rocket text-4xl text-white mb-4"></i>
+                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-sky-500 hover:bg-gray-900/50 transition-all duration-300 fade-in-element transform hover:-translate-y-2" style="transition-delay: 150ms;">
+                        <i class="fas fa-rocket text-4xl text-sky-500 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Platform Engineering</h3>
                         <p class="text-gray-400">Build robust web, cloud, AI, and cross-platform solutions at scale.</p>
                     </div>
-                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-white hover:bg-gray-900/50 transition-all duration-300 fade-in-element" style="transition-delay: 300ms;">
-                        <i class="fas fa-lightbulb text-4xl text-white mb-4"></i>
+                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-sky-500 hover:bg-gray-900/50 transition-all duration-300 fade-in-element transform hover:-translate-y-2" style="transition-delay: 300ms;">
+                        <i class="fas fa-lightbulb text-4xl text-sky-500 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Innovation Enablement</h3>
                         <p class="text-gray-400">Turn innovative ideas into market-dominating realities with speed and precision.</p>
                     </div>
-                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-white hover:bg-gray-900/50 transition-all duration-300 fade-in-element" style="transition-delay: 450ms;">
-                        <i class="fas fa-chart-line text-4xl text-white mb-4"></i>
+                    <div class="border border-gray-800 p-8 rounded-lg text-center hover:border-sky-500 hover:bg-gray-900/50 transition-all duration-300 fade-in-element transform hover:-translate-y-2" style="transition-delay: 450ms;">
+                        <i class="fas fa-chart-line text-4xl text-sky-500 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Strategic Growth & GTM</h3>
                         <p class="text-gray-400">Architect market entry, growth loops, and unstoppable brand presence.</p>
                     </div>
@@ -221,29 +231,29 @@
         <section id="why-choose" class="py-20 md:py-32 bg-black">
             <div class="container mx-auto px-4">
                 <h2 class="section-title fade-in-element">The Devlyv Advantage</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
                     <div class="fade-in-element">
-                        <h3 class="text-xl font-bold text-white mb-2">Execution-Obsessed</h3>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">Execution-Obsessed</h3>
                         <p class="text-gray-400">We don't just plan - we execute with relentless focus on results that matter to your bottom line.</p>
                     </div>
                     <div class="fade-in-element">
-                        <h3 class="text-xl font-bold text-white mb-2">Enterprise-Scale Mastery</h3>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">Enterprise-Scale Mastery</h3>
                         <p class="text-gray-400">Deep expertise in handling complex, large-scale challenges with proven frameworks.</p>
                     </div>
                     <div class="fade-in-element">
-                        <h3 class="text-xl font-bold text-white mb-2">Hybrid Service + Venture</h3>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">Hybrid Service + Venture</h3>
                         <p class="text-gray-400">A unique blend of consulting and venture building, offering solutions from strategy to execution.</p>
                     </div>
                     <div class="fade-in-element">
-                        <h3 class="text-xl font-bold text-white mb-2">Future-Ready Engineering</h3>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">Future-Ready Engineering</h3>
                         <p class="text-gray-400">Cutting-edge tech stack and architecture that ensure your solutions scale and adapt.</p>
                     </div>
                     <div class="fade-in-element">
-                        <h3 class="text-xl font-bold text-white mb-2">Trusted, Global Mindset</h3>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">Trusted, Global Mindset</h3>
                         <p class="text-gray-400">International perspective with local execution, combining global best practices with agile methods.</p>
                     </div>
                      <div class="fade-in-element">
-                        <h3 class="text-xl font-bold text-white mb-2">Strategic Partnership</h3>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2">Strategic Partnership</h3>
                         <p class="text-gray-400">We function as an extension of your team, deeply invested in your long-term success.</p>
                     </div>
                 </div>
@@ -256,9 +266,9 @@
                 <h2 class="section-title fade-in-element">What Our Partners Say</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="glass-card p-8 rounded-xl fade-in-element">
-                        <p class="text-gray-300 mb-6">"Devlyv transformed our operations and helped us dominate the market! Their execution-obsessed approach delivered results beyond our expectations."</p>
+                        <p class="text-gray-300 mb-6 italic">"Devlyv transformed our operations and helped us dominate the market! Their execution-obsessed approach delivered results beyond our expectations."</p>
                         <div class="flex items-center">
-                            <img src="https://placehold.co/48x48/FFFFFF/111827?text=JD" alt="John Doe" class="w-12 h-12 rounded-full mr-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop&facepad=4&h=100&w=100" alt="Professional headshot of John Doe" class="w-12 h-12 rounded-full mr-4 border-2 border-sky-500 object-cover">
                             <div>
                                 <h4 class="font-bold text-white">John Doe</h4>
                                 <p class="text-sm text-gray-400">CEO, TechCorp Global</p>
@@ -266,9 +276,9 @@
                         </div>
                     </div>
                     <div class="glass-card p-8 rounded-xl fade-in-element" style="transition-delay: 200ms;">
-                        <p class="text-gray-300 mb-6">"Their innovative solutions are unmatched. Devlyv's strategic approach to enterprise transformation is simply revolutionary."</p>
+                        <p class="text-gray-300 mb-6 italic">"Their innovative solutions are unmatched. Devlyv's strategic approach to enterprise transformation is simply revolutionary."</p>
                         <div class="flex items-center">
-                            <img src="https://placehold.co/48x48/FFFFFF/111827?text=JS" alt="Jane Smith" class="w-12 h-12 rounded-full mr-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop&facepad=4&h=100&w=100" alt="Professional headshot of Jane Smith" class="w-12 h-12 rounded-full mr-4 border-2 border-sky-500 object-cover">
                             <div>
                                 <h4 class="font-bold text-white">Jane Smith</h4>
                                 <p class="text-sm text-gray-400">CTO, Innovation Labs</p>
@@ -276,9 +286,9 @@
                         </div>
                     </div>
                     <div class="glass-card p-8 rounded-xl fade-in-element" style="transition-delay: 400ms;">
-                        <p class="text-gray-300 mb-6">"A game-changer for our enterprise! Devlyv's hybrid approach and future-ready engineering delivered sustainable competitive advantage."</p>
+                        <p class="text-gray-300 mb-6 italic">"A game-changer for our enterprise! Devlyv's hybrid approach and future-ready engineering delivered sustainable competitive advantage."</p>
                         <div class="flex items-center">
-                            <img src="https://placehold.co/48x48/FFFFFF/111827?text=EJ" alt="Emily Johnson" class="w-12 h-12 rounded-full mr-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop&facepad=4&h=100&w=100" alt="Professional headshot of Emily Johnson" class="w-12 h-12 rounded-full mr-4 border-2 border-sky-500 object-cover">
                             <div>
                                 <h4 class="font-bold text-white">Emily Johnson</h4>
                                 <p class="text-sm text-gray-400">COO, Enterprise Solutions Inc.</p>
@@ -297,16 +307,16 @@
                     <p class="text-gray-300 mb-12 max-w-2xl mx-auto fade-in-element">Ready to transform your enterprise? Tell us about your project. We're ready to execute.</p>
                     <form class="fade-in-element" action="mailto:DevlyvEnterprises@outlook.com" method="post" target="_blank" enctype="text/plain">
                         <div class="grid sm:grid-cols-2 gap-6 mb-6">
-                            <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-white focus:outline-none">
-                            <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-white focus:outline-none">
+                            <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-colors">
+                            <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-colors">
                         </div>
                         <div class="mb-6">
-                             <input type="text" name="company" placeholder="Company Name" class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-white focus:outline-none">
+                             <input type="text" name="company" placeholder="Company Name" class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-colors">
                         </div>
                         <div class="mb-6">
-                            <textarea name="message" rows="6" placeholder="Project Details..." required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-white focus:outline-none"></textarea>
+                            <textarea name="message" rows="6" placeholder="Project Details..." required class="w-full bg-gray-900 text-white border border-gray-700 rounded-lg p-3 focus:ring-2 focus:ring-sky-500 focus:outline-none transition-colors"></textarea>
                         </div>
-                        <button type="submit" class="bg-white text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-transform transform hover:scale-105">Submit Project</button>
+                        <button type="submit" class="bg-sky-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-sky-600 transition-transform transform hover:scale-105">Submit Project</button>
                     </form>
                 </div>
             </div>
@@ -324,23 +334,23 @@
                 <div>
                     <h5 class="font-bold text-white mb-4">Quick Links</h5>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
-                        <li><a href="#offerings" class="text-gray-400 hover:text-white">Offerings</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-sky-400 transition-colors">About</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-sky-400 transition-colors">Products</a></li>
+                        <li><a href="#offerings" class="text-gray-400 hover:text-sky-400 transition-colors">Offerings</a></li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="font-bold text-white mb-4">Contact</h5>
                     <ul class="space-y-2">
-                        <li><a href="mailto:DevlyvEnterprises@outlook.com" class="text-gray-400 hover:text-white">DevlyvEnterprises@outlook.com</a></li>
+                        <li><a href="mailto:DevlyvEnterprises@outlook.com" class="text-gray-400 hover:text-sky-400 transition-colors">DevlyvEnterprises@outlook.com</a></li>
                         <li class="text-gray-400">Bangalore, India</li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="font-bold text-white mb-4">Connect</h5>
                     <div class="flex space-x-4 justify-center md:justify-start">
-                        <a href="https://www.linkedin.com/company/devlyv-enterprises/" target="_blank" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/devlyv-enterprises/" target="_blank" class="text-gray-400 hover:text-sky-400 transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors text-2xl"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -395,7 +405,7 @@
             });
             
              // Active nav link highlighting
-            const sections = document.querySelectorAll('section');
+            const sections = document.querySelectorAll('main > section');
             const navLinks = document.querySelectorAll('.nav-link');
 
             const activateNavLink = () => {
@@ -409,7 +419,8 @@
 
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current)) {
+                    const href = link.getAttribute('href');
+                    if (href && href.includes(current)) {
                         link.classList.add('active');
                     }
                 });
